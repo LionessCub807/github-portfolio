@@ -2,116 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name | Developer</title>
-<meta name="description" content="Portfolio of Your Name, full-stack developer.">
-<!--
-  OPTION B: GitHub Pages portfolio
-  Setup: create a repo named your-username.github.io, add this file as index.html,
-  then push. Your site goes live at https://your-username.github.io.
-  Search for [brackets] and "Your Name" to replace the placeholder content.
--->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selly Beyene – Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
 <style>
-  :root {
-    --bg: #f6f7f3; --ink: #1c2321; --muted: #5d6b66;
-    --line: #d9ded8; --accent: #1f6f5c; --card: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #141a18; --ink: #e8ede9; --muted: #9aa8a2;
-      --line: #2a3531; --accent: #5fc9a9; --card: #1a2220;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--bg); color: var(--ink);
-    font: 400 1.0625rem/1.65 Inter, system-ui, sans-serif;
-  }
-  a { color: var(--accent); text-underline-offset: 3px; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.5rem; }
-  nav { padding: 1.5rem 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-  nav a { color: var(--ink); text-decoration: none; margin-left: 1.25rem; }
-  nav a:first-child { margin-left: 0; font-weight: 500; }
-  nav div a:hover { color: var(--accent); }
-  h1, h2 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0; }
-  h1 { font-size: clamp(2.5rem, 8vw, 4.25rem); font-weight: 700; letter-spacing: -0.02em; }
-  h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
-  header { padding: 5rem 0 4rem; }
-  header p { max-width: 34rem; color: var(--muted); font-size: 1.25rem; margin: 1.5rem 0 2rem; }
-  .btn {
-    display: inline-block; padding: .7rem 1.25rem; border-radius: 6px;
-    background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 500;
-  }
-  .btn.alt { background: none; color: var(--ink); border: 1px solid var(--line); margin-left: .5rem; }
-  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
-  .project { display: block; padding: 1.25rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
-  .project:last-child { border-bottom: 0; }
-  .project h3 { margin: 0 0 .25rem; font-size: 1.15rem; }
-  .project:hover h3 { color: var(--accent); }
-  .project p { margin: 0 0 .5rem; color: var(--muted); }
-  .project small { color: var(--muted); }
-  .skills { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; margin: 0; }
-  .skills li { padding: .3rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; }
-  .job { margin-bottom: 1.5rem; }
-  .job b { font-weight: 500; }
-  .job span { color: var(--muted); display: block; font-size: .95rem; }
-  footer { padding: 3rem 0 4rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .95rem; }
+:root{--bg:#e9edf4;--ink:#12203a;--mute:#5a6785;--acc:#7c3aed;--acc2:#067a46;--panel:#fff;--line:#d3dae8;--r:8px;--font:"JetBrains Mono",ui-monospace,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--onacc:#fff}
+:root[data-theme=dark]{--bg:#0e1424;--ink:#dbe3f5;--mute:#8f9cc2;--acc:#b794ff;--acc2:#4ade80;--panel:#151d33;--line:#263252;--onacc:#0e1424}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1424;--ink:#dbe3f5;--mute:#8f9cc2;--acc:#b794ff;--acc2:#4ade80;--panel:#151d33;--line:#263252;--onacc:#0e1424}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 20px 96px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:64px;font-size:.9rem}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--acc2)}
+nav .brand{color:var(--ink);font-weight:700}nav .brand b{color:var(--acc)}
+nav .links{display:flex;gap:18px}
+.prompt{color:var(--mute);margin:0 0 10px}.prompt b{color:var(--acc2);font-weight:700}
+h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.08;margin:0 0 18px;font-weight:700;letter-spacing:-.04em;max-width:18ch}
+.caret{display:inline-block;width:.5ch;height:.9em;background:var(--acc2);vertical-align:-.1em;margin-left:.15ch;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{color:var(--mute);max-width:56ch;margin:0 0 72px}
+h2{font-size:1rem;margin:0 0 20px;color:var(--mute);font-weight:400}h2 b{color:var(--acc2)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.panel{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .2s,border-color .2s}
+.panel:hover{transform:translateY(-4px);border-color:var(--acc2)}
+.bar{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:.75rem;color:var(--mute)}
+.bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.bar span{margin-left:6px}
+.panel .body{padding:16px 18px 20px}
+.panel h3{margin:0 0 6px;font-size:1.1rem;line-height:1.3}
+.panel h3::before,.detail h1::before{content:"~/";color:var(--acc)}
+.panel p{margin:0 0 12px;color:var(--mute);font-size:.88rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.75rem;padding:1px 8px;border-radius:3px;border:1px solid var(--line);color:var(--mute)}
+.media{aspect-ratio:16/10;width:100%;display:block;object-fit:cover;background:var(--line)}
+.ph{display:grid;place-items:center;font-weight:700;font-size:2rem;color:rgba(255,255,255,.88);letter-spacing:-.03em}
+.back{display:inline-block;margin-bottom:32px;color:var(--mute);text-decoration:none}
+.back:hover{color:var(--acc2)}
+.detail{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:start}
+.win{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel)}
+.detail .media{aspect-ratio:4/3}
+.detail h1{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:14px}
+.detail p{margin:0 0 16px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{padding:9px 16px;border-radius:4px;border:1px solid var(--ink);text-decoration:none;font-weight:700;font-size:.88rem}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:var(--onacc)}
+.btn:hover{opacity:.85}
+.mode{font:inherit;font-size:.85rem;background:none;border:1px solid var(--line);border-radius:4px;color:var(--mute);padding:2px 10px;cursor:pointer}
+.mode:hover{color:var(--acc2);border-color:var(--acc2)}
+@media(max-width:760px){.grid,.detail{grid-template-columns:1fr}.detail{gap:24px}}
+@media(prefers-reduced-motion:reduce){.panel{transition:none}.panel:hover{transform:none}.caret{animation:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav>
-    <a href="#top">Your Name</a>
-    <div><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-  </nav>
+<div class="wrap" id="app"></div>
+<script>
+/* ---- EDIT ME ----
+   media.src: path to your image or video (e.g. "images/shelf.png" or "videos/demo.mp4").
+   Leave src empty to show a colored placeholder. */
+const ME = {
+  name: "Selly Beyene",
+  bio: "Hi everyone! I’m Selly and I’m an aspiring full-stack developer focused on AI and ML implementations and producing well thought out and creative projects. I love working with cutting edge technology and learning new things.",
+  github: "https://github.com/LionessCub807",
+  email: "sellybeyene@outlook.com"
+};
+const PROJECTS = [
+  {slug:"ai-video-workshop", title:"AI Video Workshop", blurb:"A tool designed to help video editors streamline the process of editing long-form videos.", hue:258, media:{type:"image", src:"ai_workshop_view.png"},
+   tags:["Python","FastAPI","AI Pipeline","React"], repo:"https://github.com/LionessCub807/ai-video-workshop", demo:"#",
+   desc:["Editing long videos can require hours of manually reviewing footage to find moments that could benefit from sound effects, cuts, emphasis, or other enhancements.", "Video Editor Enhancer aims to simplify this process by:", 
+    "- Identifying key moments in a video",
+    "- Providing precise timestamps",
+    "- Suggesting potential edits",
+    "- Recommending appropriate sound effects",
+    "- Explaining the reasoning behind each suggestion",
+    "The goal is not to replace the editor, but to provide useful recommendations that make the editing workflow faster and easier."]},
+  {slug:"zero-g-rl-project", title:"Zero Gravity Reinforcement Learning", blurb:"A imperical investigation of RL algorithms in an outer space environment.", hue:150, media:{type:"video", src:"video_tour_of_virtual_iss.mp4"},
+   tags:["Python","Reinforcement Learning", "XML"], repo:"https://github.com/LionessCub807/zero-g-rl-project", demo:"",
+   desc:["This project compares two reinforcement learning algorithms (Proximal Policy Optimization & Soft Actor-Critic) and how they behave in both a fully observable and a partially observable environment. The agent is cube-shaped robot in a zero-gravity environment aboard a simulated International Space Station.","It's inspired by NASA's Astrobee robots aboard the International Space Station."]},
+  {slug:"fitness-trainer-chatbot", title:"Fitness Chatbot", blurb:"A fitness chatbot that gives workout suggestions.", hue:270, media:{type:"image", src:"fitness_chatbot_ui.png"},
+   tags:["Python","LangChain","Streamlit", "FastAPI"], repo:"https://github.com/LionessCub807/fitness-trainer-chatbot", demo:"#",
+   desc:["This project is a fitness chatbot developed in Python using LangChain. Streamlit for the UI. FastAPI for the API.","Users can interact and create workout plans with the chatbot."]},
+];
+/* ------------------ */
 
-  <header id="top">
-    <h1>I build reliable software for the web.</h1>
-    <p>I'm Your Name, a full-stack developer in [City]. I like turning messy problems into simple, well-tested products.</p>
-    <a class="btn" href="#projects">See my work</a>
-    <a class="btn alt" href="https://github.com/your-username">GitHub profile</a>
-  </header>
+const app = document.getElementById("app");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <a class="project" href="https://github.com/your-username/project-one">
-      <h3>Project One</h3>
-      <p>One or two sentences on the problem it solves and the result, such as users, speed or time saved.</p>
-      <small>TypeScript, React, Postgres</small>
-    </a>
-    <a class="project" href="https://github.com/your-username/project-two">
-      <h3>Project Two</h3>
-      <p>One or two sentences on the problem it solves and the result.</p>
-      <small>Python, FastAPI</small>
-    </a>
-    <a class="project" href="https://github.com/your-username/project-three">
-      <h3>Project Three</h3>
-      <p>One or two sentences on the problem it solves and the result.</p>
-      <small>Go, Docker</small>
-    </a>
-  </section>
+function media(p, thumb){
+  const m = p.media;
+  if(m.src){
+    return m.type === "video"
+      ? `<video class="media" src="${esc(m.src)}" ${thumb?"muted playsinline preload=metadata":"controls playsinline"}></video>`
+      : `<img class="media" src="${esc(m.src)}" alt="${esc(p.title)} screenshot" loading="lazy">`;
+  }
+  const label = m.type === "video" ? "▶ " + p.title : p.title;
+  return `<div class="media ph" role="img" aria-label="Placeholder for ${esc(p.title)} ${m.type}" style="background:linear-gradient(135deg,hsl(${p.hue} 65% 45%),hsl(${(p.hue+25)%360} 70% 30%))">${esc(label)}</div>`;
+}
+const tags = p => `<div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`;
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Write two or three short sentences about how you work, what you care about, and what you're looking for next.</p>
-    <div class="job"><b>Company Name, Software Engineer</b><span>2023 to present</span></div>
-    <div class="job"><b>Previous Company, Junior Developer</b><span>2021 to 2023</span></div>
-    <ul class="skills">
-      <li>TypeScript</li><li>React</li><li>Node.js</li><li>Python</li><li>PostgreSQL</li><li>Docker</li>
-    </ul>
-  </section>
+function nav(){
+  return `<nav><a class="brand" href="#/"><b>~/</b>${esc(ME.name.toLowerCase().replace(/ /g,"-"))}</a>
+  <div class="links"><a href="${esc(ME.github)}">GitHub</a><a href="${esc(ME.email)}">Email</a><button class="mode" type="button"></button></div></nav>`;
+}
+function home(){
+  app.innerHTML = nav() +
+  `<p class="prompt"><b>$</b> whoami</p><h1>${esc(ME.name)}, building innovative AI/ML projects.<span class="caret"></span></h1><p class="lede">${esc(ME.bio)}</p>
+  <h2><b>#</b> projects</h2><div class="grid">` +
+  PROJECTS.map(p=>`<a class="panel" href="#/p/${p.slug}"><div class="bar"><i></i><i></i><i></i><span>${esc(p.slug)}/</span></div>${media(p,true)}<div class="body"><h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p>${tags(p)}</div></a>`).join("") +
+  `</div>`;
+  document.title = ME.name + " – Portfolio";
+}
+function project(slug){
+  const p = PROJECTS.find(x=>x.slug===slug);
+  if(!p){ location.hash = "#/"; return; }
+  app.innerHTML = nav() + `<a class="back" href="#/">$ cd ..</a>
+  <div class="detail"><div class="win"><div class="bar"><i></i><i></i><i></i><span>${esc(p.slug)}/</span></div>${media(p,false)}</div>
+  <div><h1>${esc(p.title)}</h1>${tags(p)}<div style="height:18px"></div>
+  ${p.desc.map(d=>`<p>${esc(d)}</p>`).join("")}
+  <div class="btns"><a class="btn pri" href="${esc(p.repo)}">View on GitHub</a>${p.demo?`<a class="btn" href="${esc(p.demo)}">Live demo</a>`:""}</div></div></div>`;
+  document.title = p.title + " – " + ME.name;
+}
+function route(){
+  const m = location.hash.match(/^#\/p\/(.+)$/);
+  m ? project(decodeURIComponent(m[1])) : home();
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange", route);
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>I'm open to [freelance work / full-time roles]. The best way to reach me is <a href="mailto:you@example.com">you@example.com</a>, or find me on <a href="https://linkedin.com/in/your-handle">LinkedIn</a>.</p>
-  </section>
+/* Light/dark mode: follows the system setting until the visitor picks one */
+const mq = matchMedia("(prefers-color-scheme: dark)");
+const root = document.documentElement;
+let saved = null;
+try{ saved = localStorage.getItem("theme"); }catch(e){}
+if(saved==="light"||saved==="dark") root.dataset.theme = saved;
+const isDark = () => root.dataset.theme ? root.dataset.theme==="dark" : mq.matches;
+function syncMode(){
+  document.querySelectorAll(".mode").forEach(b=>{
+    b.textContent = isDark() ? "light" : "dark";
+    b.setAttribute("aria-label", isDark() ? "Switch to light mode" : "Switch to dark mode");
+  });
+}
+document.addEventListener("click", e=>{
+  if(!e.target.closest(".mode")) return;
+  const next = isDark() ? "light" : "dark";
+  root.dataset.theme = next;
+  try{ localStorage.setItem("theme", next); }catch(err){}
+  syncMode();
+});
+mq.addEventListener("change", syncMode);
+new MutationObserver(syncMode).observe(app,{childList:true});
+route();
 
-  <footer>&copy; 2026 Your Name</footer>
-</div>
+</script>
 </body>
 </html>
