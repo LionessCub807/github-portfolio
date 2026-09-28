@@ -1,74 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name | Developer</title>
+<meta name="description" content="Portfolio of Your Name, full-stack developer.">
+<!--
+  OPTION B: GitHub Pages portfolio
+  Setup: create a repo named your-username.github.io, add this file as index.html,
+  then push. Your site goes live at https://your-username.github.io.
+  Search for [brackets] and "Your Name" to replace the placeholder content.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f3; --ink: #1c2321; --muted: #5d6b66;
+    --line: #d9ded8; --accent: #1f6f5c; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a18; --ink: #e8ede9; --muted: #9aa8a2;
+      --line: #2a3531; --accent: #5fc9a9; --card: #1a2220;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 1.0625rem/1.65 Inter, system-ui, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.5rem; }
+  nav { padding: 1.5rem 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  nav a { color: var(--ink); text-decoration: none; margin-left: 1.25rem; }
+  nav a:first-child { margin-left: 0; font-weight: 500; }
+  nav div a:hover { color: var(--accent); }
+  h1, h2 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(2.5rem, 8vw, 4.25rem); font-weight: 700; letter-spacing: -0.02em; }
+  h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+  header { padding: 5rem 0 4rem; }
+  header p { max-width: 34rem; color: var(--muted); font-size: 1.25rem; margin: 1.5rem 0 2rem; }
+  .btn {
+    display: inline-block; padding: .7rem 1.25rem; border-radius: 6px;
+    background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 500;
+  }
+  .btn.alt { background: none; color: var(--ink); border: 1px solid var(--line); margin-left: .5rem; }
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  .project { display: block; padding: 1.25rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+  .project:last-child { border-bottom: 0; }
+  .project h3 { margin: 0 0 .25rem; font-size: 1.15rem; }
+  .project:hover h3 { color: var(--accent); }
+  .project p { margin: 0 0 .5rem; color: var(--muted); }
+  .project small { color: var(--muted); }
+  .skills { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; margin: 0; }
+  .skills li { padding: .3rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: .95rem; }
+  .job { margin-bottom: 1.5rem; }
+  .job b { font-weight: 500; }
+  .job span { color: var(--muted); display: block; font-size: .95rem; }
+  footer { padding: 3rem 0 4rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .95rem; }
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Your Name</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<div class="wrap">
+  <nav>
+    <a href="#top">Your Name</a>
+    <div><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  </nav>
 
-    <section class="hero">
-      <h2>Hi, I'm Your Name</h2>
-      <p>A developer building clean, useful, and creative projects.</p>
-      <a href="#projects" class="button">View My Work</a>
-    </section>
+  <header id="top">
+    <h1>I build reliable software for the web.</h1>
+    <p>I'm Your Name, a full-stack developer in [City]. I like turning messy problems into simple, well-tested products.</p>
+    <a class="btn" href="#projects">See my work</a>
+    <a class="btn alt" href="https://github.com/your-username">GitHub profile</a>
   </header>
 
-  <main>
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        Write a short introduction about yourself, your skills, and what kind of
-        projects you enjoy building.
-      </p>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <a class="project" href="https://github.com/your-username/project-one">
+      <h3>Project One</h3>
+      <p>One or two sentences on the problem it solves and the result, such as users, speed or time saved.</p>
+      <small>TypeScript, React, Postgres</small>
+    </a>
+    <a class="project" href="https://github.com/your-username/project-two">
+      <h3>Project Two</h3>
+      <p>One or two sentences on the problem it solves and the result.</p>
+      <small>Python, FastAPI</small>
+    </a>
+    <a class="project" href="https://github.com/your-username/project-three">
+      <h3>Project Three</h3>
+      <p>One or two sentences on the problem it solves and the result.</p>
+      <small>Go, Docker</small>
+    </a>
+  </section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
+  <section id="about">
+    <h2>About</h2>
+    <p>Write two or three short sentences about how you work, what you care about, and what you're looking for next.</p>
+    <div class="job"><b>Company Name, Software Engineer</b><span>2023 to present</span></div>
+    <div class="job"><b>Previous Company, Junior Developer</b><span>2021 to 2023</span></div>
+    <ul class="skills">
+      <li>TypeScript</li><li>React</li><li>Node.js</li><li>Python</li><li>PostgreSQL</li><li>Docker</li>
+    </ul>
+  </section>
 
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of your project and what technologies you used.</p>
-          <a href="https://github.com/yourusername/project-one" target="_blank">GitHub</a>
-        </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I'm open to [freelance work / full-time roles]. The best way to reach me is <a href="mailto:you@example.com">you@example.com</a>, or find me on <a href="https://linkedin.com/in/your-handle">LinkedIn</a>.</p>
+  </section>
 
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>A short description of your project and what problem it solves.</p>
-          <a href="https://github.com/yourusername/project-two" target="_blank">GitHub</a>
-        </div>
-
-        <div class="project-card">
-          <h3>Project Three</h3>
-          <p>A short description of your project and what makes it interesting.</p>
-          <a href="https://github.com/yourusername/project-three" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Your Name. All rights reserved.</p>
-  </footer>
+  <footer>&copy; 2026 Your Name</footer>
+</div>
 </body>
 </html>
